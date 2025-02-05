@@ -10,6 +10,8 @@ namespace eCommerceApp
     {
         private int _prodID;
         private string _prodName;
+        public double ItemPrice { get; set; }
+        public int StockAmount { get; set; }
 
         public int ProdID
         {
@@ -35,8 +37,9 @@ namespace eCommerceApp
                 _prodName = value;
             }
         }
-        public double ItemPrice { get; set; }
-        public int StockAmount { get; set; }
+
+       
+
 
         public Product(int prodID, string prodName, double itemPrice, int stockAmount)
         {
@@ -47,15 +50,6 @@ namespace eCommerceApp
         }
 
 
-
-        public void IncreaseStock(int quantity)
-        {
-            StockAmount += quantity;
-        }
-
-        public void DecreaseStock(int quantity)
-        {
-            StockAmount -= quantity;
-        }
+      
     }
 }

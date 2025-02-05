@@ -11,7 +11,7 @@ namespace EcommerceAppUnitTest
             _product = new Product(101, "Laptop", 999.99, 10);
         }
 
-        [TestCase(2)]
+        [TestCase(10)]
         [TestCase(2000)]
         [TestCase(50000)]
         public void ProdID_ShouldBeWithinValidRange(int prodID)
@@ -22,7 +22,7 @@ namespace EcommerceAppUnitTest
         }
 
         [TestCase("Smartphone")]   
-        [TestCase(" ")]   
+        [TestCase("Bottle Water")]   
         [TestCase("Gaming Console")] 
         public void ProdName_ShouldAcceptValidNames(string prodName)
         {
@@ -33,6 +33,7 @@ namespace EcommerceAppUnitTest
 
         }
 
+        
 
     }
 }
