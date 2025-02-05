@@ -20,5 +20,15 @@ namespace eCommerceApp
             ItemPrice = itemPrice;
             StockAmount = stockAmount;
         }
+
+        public void IncreaseStock(int quantity)
+        {
+            StockAmount += quantity;
+        }
+
+        public void DecreaseStock(int quantity)
+        {
+            StockAmount -= quantity;
+        }
     }
 }
