@@ -8,8 +8,33 @@ namespace eCommerceApp
 {
     public class Product
     {
-        public int ProdID { get; set; }
-        public string ProdName { get; set; }
+        private int _prodID;
+        private string _prodName;
+
+        public int ProdID
+        {
+            get => _prodID;
+            set
+            {
+                if (value < 5 || value > 50000)
+                {
+                    throw new ArgumentOutOfRangeException(nameof(ProdID), "ProdID must be between 5 and 50000.");
+                }
+                _prodID = value;
+            }
+        }
+      public string ProdName
+        {
+            get => _prodName;
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                {
+                    throw new ArgumentException(nameof(ProdName), "Product name cannot be null or empty.");
+                }
+                _prodName = value;
+            }
+        }
         public double ItemPrice { get; set; }
         public int StockAmount { get; set; }
 
@@ -20,6 +45,8 @@ namespace eCommerceApp
             ItemPrice = itemPrice;
             StockAmount = stockAmount;
         }
+
+
 
         public void IncreaseStock(int quantity)
         {

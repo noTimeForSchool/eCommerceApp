@@ -5,6 +5,8 @@ VisualStudioVersion = 17.12.35527.113 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerceApp", "eCommerceApp\eCommerceApp.csproj", "{93A80DCA-A1CE-46AF-A806-BEA98526D6C5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcommerceAppUnitTest", "EcommerceAppUnitTest\EcommerceAppUnitTest.csproj", "{0C4FF11D-A49D-4DE3-9A1B-2E936507F0FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{93A80DCA-A1CE-46AF-A806-BEA98526D6C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93A80DCA-A1CE-46AF-A806-BEA98526D6C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93A80DCA-A1CE-46AF-A806-BEA98526D6C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C4FF11D-A49D-4DE3-9A1B-2E936507F0FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C4FF11D-A49D-4DE3-9A1B-2E936507F0FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C4FF11D-A49D-4DE3-9A1B-2E936507F0FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C4FF11D-A49D-4DE3-9A1B-2E936507F0FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
