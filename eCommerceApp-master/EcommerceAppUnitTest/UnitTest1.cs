@@ -12,12 +12,27 @@ namespace EcommerceAppUnitTest
         }
         
 
-        
+        [TestCase(10)]
+        [TestCase(2000)]
+        [TestCase(50000)]
+        public void ProdID_ShouldBeWithinValidRange(int prodID)
+        {
+            _product.ProdID = prodID;
 
-        
-       
-       
+            Assert.That(_product.ProdID, Is.EqualTo(prodID));
+        }
 
+        [TestCase("Smartphone")]   
+        [TestCase("Bottle Water")]   
+        [TestCase("Gaming Console")] 
+        public void ProdName_ShouldAcceptValidNames(string prodName)
+        {
+           
+            _product.ProdName = prodName;
+
+            Assert.That(_product.ProdName, Is.EqualTo(prodName));
+
+        }
 
     }
 }
