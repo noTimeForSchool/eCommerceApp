@@ -91,6 +91,37 @@ namespace eCommerceApp
             //StockDecrease = stockDecrease;
         }
 
+        public double ItemPrice
+        {
+            get
+            {
+                return _itemPrice;
+            }
+            set
+            {
+                if (value < 5 || value > 5000)
+                {
+                    throw new ArgumentOutOfRangeException(nameof(ItemPrice), "ItemPrice must be between 5 and 5000.");
+                }
+                _itemPrice = value;
+            }
+        }
+        public int StockAmount
+        {
+            get
+            {
+                return _stockAmount;
+            }
+            set
+            {
+                if (value < 5 || value > 500000)
+                {
+                    throw new ArgumentOutOfRangeException(nameof(StockAmount), "StockAmount must be between 5 and 500000.");
+                }
+                _stockAmount = value;
+            }
+        }
+
 
     }
 }

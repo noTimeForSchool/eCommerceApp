@@ -77,5 +77,46 @@ namespace EcommerceAppUnitTest
             StringAssert.Contains("Stock amount with the Decrease must not be less than 5", ex.Message);
         }
 
+        [TestCase(5)]
+        [TestCase(1000)]
+        [TestCase(5000)]
+        /// value of 5 and 5000 is in the margin of the range
+        /// value of 1000 is inside the range
+        public void ItemPrice_ShouldBeWithinValidRange(double itemPrice)
+        {
+            _product.ItemPrice = itemPrice;
+            Assert.That(_product.ItemPrice, Is.EqualTo(itemPrice));
+        }
+
+        [TestCase(4)]
+        [TestCase(5001)]
+        /// value of 4 and 5001 is out of range
+        public void ItemPrice_ShouldThrowException_WhenOutOfRange(double itemPrice)
+        {
+            var ex = Assert.Throws<ArgumentOutOfRangeException>(() => _product.ItemPrice = itemPrice);
+            StringAssert.Contains("ItemPrice must be between 5 and 5000.", ex.Message);
+        }
+
+
+        [TestCase(5)]
+        [TestCase(10000)]
+        [TestCase(500000)]
+        /// value of 5 and 500000 is in the margin of the range
+        /// value of 10000 is inside the range
+        public void StockAmount_ShouldBeWithinValidRange(int stockAmount)
+        {
+            _product.StockAmount = stockAmount;
+
+            Assert.That(_product.StockAmount, Is.EqualTo(stockAmount));
+        }
+
+        [TestCase(4)]
+        [TestCase(500001)]
+        /// value of 4 and 500001 is out of range
+        public void StockAmount_ShouldThrowException_WhenOutOfRange(int stockAmount)
+        {
+            var ex = Assert.Throws<ArgumentOutOfRangeException>(() => _product.StockAmount = stockAmount);
+            StringAssert.Contains("StockAmount must be between 5 and 500000.", ex.Message);
+        }
     }
 }
