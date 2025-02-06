@@ -84,11 +84,11 @@ namespace eCommerceApp
         {
             ProdID = prodID;
             ProdName = prodName;
-            //ItemPrice = itemPrice;
-            //StockAmount = stockAmount;
+            ItemPrice = itemPrice;
+            StockAmount = stockAmount;
 
-            //StockIncrease = stockIncrease;
-            //StockDecrease = stockDecrease;
+            StockIncrease = stockIncrease;
+            StockDecrease = stockDecrease;
         }
 
         public double ItemPrice
